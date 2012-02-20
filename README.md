@@ -9,5 +9,6 @@ Copy `config/cheddar.php` into your `app/config/` directory and set your email, 
 You can now call any of the [API methods](https://cheddargetter.com/php-client/docs/) on the `Cheddar` object. For example:
 
 ```php
-Cheddar::getCustomer('123');
+$plans = Cheddar::getPlans()->toArray();
+print_r($plans);
 ```
