@@ -15,17 +15,17 @@ Autoloader::add_classes(array(
 	'Cheddar\\Cheddar'                               => __DIR__.'/classes/cheddar.php',
 	
 	'Cheddar\\CheddarGetter_Client'                  => __DIR__.'/classes/cheddar/Client.php',
-	'Cheddar\\CheddarGetter_Client_AdapterInterface' => __DIR__.'/classes/cheddar/Client/CheddarGetter_Client_AdapterInterface.php',
-	'Cheddar\\CheddarGetter_Client_CurlAdapter'      => __DIR__.'/classes/cheddar/Client/CheddarGetter_Client_CurlAdapter.php',
-	'Cheddar\\CheddarGetter_Client_Exception'        => __DIR__.'/classes/cheddar/Client/CheddarGetter_Client_Exception.php',
-	'Cheddar\\CheddarGetter_Client_ZendAdapter'      => __DIR__.'/classes/cheddar/Client/CheddarGetter_Client_ZendAdapter.php',
+	'Cheddar\\CheddarGetter_Client_AdapterInterface' => __DIR__.'/classes/cheddar/Client/AdapterInterface.php',
+	'Cheddar\\CheddarGetter_Client_CurlAdapter'      => __DIR__.'/classes/cheddar/Client/CurlAdapter.php',
+	'Cheddar\\CheddarGetter_Client_Exception'        => __DIR__.'/classes/cheddar/Client/Exception.php',
+	'Cheddar\\CheddarGetter_Client_ZendAdapter'      => __DIR__.'/classes/cheddar/Client/ZendAdapter.php',
+	
+	'Cheddar\\CheddarGetter_Http_AdapterInterface'   => __DIR__.'/classes/cheddar/Http/AdapterInterface.php',
+	'Cheddar\\CheddarGetter_Http_NativeAdapter'      => __DIR__.'/classes/cheddar/Http/NativeAdapter.php',
+	'Cheddar\\CheddarGetter_Http_ZendAdapter'        => __DIR__.'/classes/cheddar/Http/ZendAdapter.php',
 	
 	'Cheddar\\CheddarGetter_Response'                => __DIR__.'/classes/cheddar/Response.php',
-	'Cheddar\\CheddarGetter_Response_Exception'      => __DIR__.'/classes/cheddar/Response/CheddarGetter_Response_Exception.php',
-	
-	'Cheddar\\CheddarGetter_Http_AdapterInterface'   => __DIR__.'/classes/cheddar/Http/CheddarGetter_Http_AdapterInterface.php',
-	'Cheddar\\CheddarGetter_Http_NativeAdapter'      => __DIR__.'/classes/cheddar/Http/CheddarGetter_Http_NativeAdapter.php',
-	'Cheddar\\CheddarGetter_Http_ZendAdapter'        => __DIR__.'/classes/cheddar/Http/CheddarGetter_Http_ZendAdapter.php',
+	'Cheddar\\CheddarGetter_Response_Exception'      => __DIR__.'/classes/cheddar/Response/Exception.php',
 ));
 
 /* End of file bootstrap.php */
