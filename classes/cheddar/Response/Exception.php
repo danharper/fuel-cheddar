@@ -13,7 +13,7 @@
  
 namespace Cheddar;
  
-class CheddarGetter_Response_Exception extends \Exception {
+class CheddarGetter_Response_Exception extends \FuelException {
 	
 	const REQUEST_INVALID = 400;
 	const NOT_FOUND = 404;
