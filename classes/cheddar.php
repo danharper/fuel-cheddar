@@ -4,6 +4,8 @@ namespace Cheddar;
 
 class Cheddar
 {
+	private static $cg;
+
 	/**
 	 * Initialise FuelPHP package, load config values
 	 * @return void
@@ -17,6 +19,11 @@ class Cheddar
 		$password = \Config::get('cheddar.password');
 		$product  = \Config::get('cheddar.product');
 
-		return new CheddarGetter_Client($host, $email, $password, $product);
+		self::$cg = new CheddarGetter_Client($host, $email, $password, $product);
+	}
+
+	public static function __callStatic($method, $arguments)
+	{
+		return self::$cg->$method($arguments);
 	}
 }
