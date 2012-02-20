@@ -14,7 +14,7 @@
  
 namespace Cheddar;
  
-class CheddarGetter_Response extends DOMDocument {
+class CheddarGetter_Response extends \DOMDocument {
 	
 	private $_responseType;
 	private $_array;

@@ -13,7 +13,7 @@
  
 namespace Cheddar;
  
-class CheddarGetter_Client_Exception extends Exception {
+class CheddarGetter_Client_Exception extends \Exception {
 	
 	const REQUEST_INVALID = 400;
 	const PRECONDITION_FAILED = 412;
