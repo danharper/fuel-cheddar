@@ -24,6 +24,6 @@ class Cheddar
 
 	public static function __callStatic($method, $arguments)
 	{
-		return self::$cg->$method($arguments);
+		return call_user_func_array(array(self::$cg, $method), $arguments);
 	}
 }
