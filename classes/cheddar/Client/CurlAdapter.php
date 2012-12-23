@@ -67,13 +67,19 @@ class CheddarGetter_Client_CurlAdapter implements CheddarGetter_Client_AdapterIn
 			}
 		} else {
 			curl_setopt($this->_resource, CURLOPT_USERPWD, $username . ':' . $password);
-			curl_setopt($this->_resource, CURLOPT_HTTPGET, true);
 		}
 
 		if ($args) {
 			curl_setopt($this->_resource, CURLOPT_POST, true);
 			curl_setopt($this->_resource, CURLOPT_POSTFIELDS, http_build_query($args, null, '&'));
+		} else {
+			curl_setopt($this->_resource, CURLOPT_HTTPGET, true);
+			
+			// this is required to prevent CG complaining if a POST request is followed by a GET request
+			// Prevents 'Invalid request for subscription edit -- need post' error
+			curl_setopt($this->_resource, CURLOPT_POSTFIELDS, null);
 		}
+		
 
 		$result = curl_exec($this->_resource);
 
